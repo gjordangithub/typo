@@ -2248,3 +2248,9 @@ TypoPlugins: just registered plugin [TypoPlugins::Gravatar] for :avatar target.
   [1m[35mSQL (11.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('21')
   [1m[36mSQL (12.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('79')[0m
   [1m[35mSQL (14.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('7')
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/saasbook/Documents/CS3300/Homework/HW6/typo/config/environment.rb:5)
+TypoPlugins: just registered plugin [TypoPlugins::Gravatar] for :avatar target.
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/saasbook/Documents/CS3300/Homework/HW6/typo/config/environment.rb:5)
+TypoPlugins: just registered plugin [TypoPlugins::Gravatar] for :avatar target.
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/saasbook/Documents/CS3300/Homework/HW6/typo/config/environment.rb:5)
+TypoPlugins: just registered plugin [TypoPlugins::Gravatar] for :avatar target.
