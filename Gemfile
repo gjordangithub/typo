@@ -1,3 +1,4 @@
+ruby '1.9.3'
 env = ENV["RAILS_ENV"] || 'development'
 dbfile = File.expand_path("../config/database.yml", __FILE__)
 
@@ -21,6 +22,7 @@ dbfile = File.expand_path("../config/database.yml", __FILE__)
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 source 'https://rubygems.org'
@@ -51,7 +53,7 @@ group :development, :test do
   gem 'webrat'
   gem 'rspec-rails', '~> 2.0'
   gem 'simplecov', :require => false
-  gem 'sqlite3'
+  #gem 'sqlite3'
   gem 'cucumber'
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
