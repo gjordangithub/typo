@@ -37,6 +37,20 @@ class Admin::ContentController < Admin::BaseController
     new_or_edit
   end
 
+  def merge
+    article_id = params[:id]    
+    @article = Article.find(article_id)
+
+    merge_article_id = params[:merge_article_id]
+    @merge_article = Article.find(merge_article_id)
+
+    @article.merge_with(@merge_article)
+    @article.save
+
+    flash[:notice] = _("Article #{article_id} was merged successfully with #{merge_article_id}")
+    redirect_to :action => 'index'
+  end
+
   def destroy
     @record = Article.find(params[:id])
 
@@ -158,7 +172,7 @@ class Admin::ContentController < Admin::BaseController
 
     @article.keywords = Tag.collection_to_string @article.tags
     @article.attributes = params[:article]
-    # TODO: Consider refactoring, because double rescue looks... weird.
+    
         
     @article.published_at = DateTime.strptime(params[:article][:published_at], "%B %e, %Y %I:%M %p GMT%z").utc rescue Time.parse(params[:article][:published_at]).utc rescue nil
 

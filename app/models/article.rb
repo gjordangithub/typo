@@ -1,4 +1,3 @@
-# coding: utf-8
 require 'uri'
 require 'net/http'
 
@@ -416,6 +415,11 @@ class Article < Content
     user.admin? || user_id == user.id
   end
 
+  def merge_with(other_article)
+    # other_article = self.find(other_article_id)
+    self.body = self.body + other_article.body
+  end
+
   protected
 
   def set_published_at
@@ -466,4 +470,6 @@ class Article < Content
     to = to - 1 # pull off 1 second so we don't overlap onto the next day
     return from..to
   end
+
+
 end
